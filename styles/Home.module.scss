@@ -1,0 +1,323 @@
+.containerHome{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./../public/background.png');
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2{
+    text-align: center;
+  }
+  
+  span{
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+  
+  button{
+    margin-top: 2.4rem;
+  }
+  
+}
+.photoBackground{
+  background-image: url('../public/imgIsrael.png');
+  width: 100%;
+  height: 258px;
+  margin-top: 4.4rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+  filter: brightness(50%);
+
+  @media(max-width: 780px){
+    margin-top: 0rem;
+    background-size: contain;
+    height: 150px;
+
+
+
+  }
+
+  @media(max-width: 480px){
+    display: none;
+  }
+
+}
+
+.item{
+  margin-top: -8rem !important;
+  width: max-content !important;
+  
+  img{
+    width: 400px !important;
+    margin-left: 2.5rem;
+    overflow: hidden;
+    transition: ease-in-out .2s;
+    animation: shimmer 1.2s ease-in-out infinite;
+    background-image: linear-gradient(
+        -90deg,
+        #2b2b2b 0%,
+        #1a1a1a 50%,
+        #2b2b2b 100%
+    );
+    background-size: 400% 400%;
+
+    @keyframes shimmer {
+        from{
+            background-position: 0% 0%; 
+        }
+        to{
+            background-position: -135% 0%; 
+        }
+    }
+  }
+}
+
+.containerCarrousel{
+  position: relative;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.carrousel{
+  margin-top: -8rem;
+}
+
+@media(max-width:1075px){
+
+.containerCarrousel{ width: 90%;}
+
+}
+
+@media(max-width:680PX){
+
+.containerCarrousel{ width: 100%;}
+
+.item{
+  margin-top: -10rem !important;
+}
+
+
+}
+
+@media(max-width:425px){
+
+  .carrousel{
+    margin-top: -12rem;
+  }
+
+  .containerCarrousel{ width: 100%; text-align: center !important; }
+
+  .item{
+    img{
+      width: 275px !important;
+    }
+  }
+}
+
+@media(max-width:375px){
+  .item{
+    img{
+      width: 300px !important;
+    }
+  }
+
+}
+
+.cardBoxTravel{
+  background-color: #FFF;
+  width: 90%;
+  margin: 0 auto;
+  color: #151512;
+  display: flex;
+  margin-bottom: 3.2rem;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035);
+
+  img{
+    object-fit: cover;
+  }
+
+  .contentCard{
+    padding: 8rem 4rem;
+
+    .description{
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+
+
+    .sectionDetails{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      
+      p{
+        position: relative;
+        font-weight: bold;
+        font-size: 2.4rem;
+        margin-left: 1.1rem;
+
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -12px;
+          height: 100%;
+          width: 5px;
+          background-color: #FAFF12;
+        }
+      }
+    }
+
+    .buttons{
+      margin-top: 4rem;
+      display: flex;
+      gap: .8rem;
+      justify-content: space-between;
+
+      .btnWhats{
+        background-color: #17183B;
+        font-weight: 300;
+
+        &:hover{
+          color: #fff;
+        }
+      }
+
+      .btnKnowMore{
+        border: 1px solid #17183B;
+        color: #17183B;
+        font-weight: 300;
+      }
+
+      a{
+        width: 100%;
+      }
+
+      button{
+        width: 100%;
+        transition: .2s ease-out;
+
+        &:hover{
+          transform: translateY(-5%);
+        }
+      }
+    }
+
+  }
+
+  @media(max-width:1005px){
+    img{
+      width: 450px;
+    }
+  }
+
+  @media(max-width:976px){
+
+    img{
+      width: 400px;
+    }
+    .contentCard{
+      padding: 4rem 4rem;
+    }
+
+  }
+
+  @media(max-width:888px){
+    img{
+      width: 350px;
+    }
+    .contentCard{
+
+    .description{
+      margin-top: .6rem;
+    }
+
+    .buttons{
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media(max-width:780px){
+  img{
+    width: 250px;
+  }
+}
+
+@media(max-width:676px){
+  flex-direction: column;
+
+  img{
+    order: 0;
+    width: 100%;
+    height: 200px;
+  }
+
+  .contentCard{
+    order: 1;
+  }
+
+}
+
+@media(max-width:388px){
+  .buttons{
+    flex-direction: column;
+  }
+}
+
+}
+
+
+.modalStyles{
+  padding: 2rem 4rem; 
+  text-align: left !important;
+
+  .modalStylesHeader{
+    display: flex;
+    justify-content: space-between;
+
+    h2{
+      font-size: 2.4rem;
+      color: #17183B;
+
+    }
+
+    button{
+      width: max-content;
+      padding: 0;
+      color: #17183B;
+    }
+  }
+
+  div{
+    padding: 1rem;
+
+    h2{
+      font-size: 2rem;
+      margin-left: 0;
+      margin-bottom: .5rem;
+    }
+
+    p{
+      font-weight: 300;
+    }
+  }
+
+  @media(max-width:485px){
+    margin: 0 auto;
+    width: 85%;
+    padding: 2rem;
+  }
+
+}
+
